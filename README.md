@@ -14,7 +14,7 @@
 <p align="center">
   <strong>Build hype. Capture demand. Launch bigger.</strong>
   <br />
-  A hosted waitlist SaaS for indie makers — landing page, embeddable form, real signups, CSV export.
+  A hosted waitlist SaaS for indie makers - landing page, embeddable form, real signups, CSV export.
 </p>
 
 <p align="center">
@@ -32,44 +32,44 @@
 ---
 
 <p align="center">
-  <img src="screenshots/hero.png" alt="Waitly landing page — Build hype. Capture demand. Launch bigger." width="100%" />
+  <img src="screenshots/hero.png" alt="Waitly landing page - Build hype. Capture demand. Launch bigger." width="100%" />
 </p>
 
 ## What this is
 
-A working SaaS for indie makers who want to validate demand before building. Sign up, create a project, share the URL, watch emails come in, export the list when you're ready to launch.
+Waitly is a working SaaS for indie makers who want to test demand before they build. You can sign up, create a project, share the link, watch signups come in, and export the list when it's time to launch.
 
-This repo is also a **portfolio piece** — full-stack Next.js 16 + Auth.js v5 + Prisma + Postgres, deployed end-to-end on Vercel with branch-per-preview Neon databases. Source code lives in a private repo; this README is the case study.
+This repo is also a **portfolio piece**: a full-stack Next.js 16 app built with Auth.js v5, Prisma, and Postgres, deployed end to end on Vercel with branch-per-preview Neon databases. The source lives in a private repo, so this README serves as the case study.
 
-> **Status:** Public beta. Free tier live. Stripe billing, custom domains, and webhook notifications planned next.
+> **Status:** Public beta. Free tier is live. Stripe billing, custom domains, and webhook notifications are next.
 
 ---
 
 ## Screenshots
 
 ### Interactive product preview
-The marketing page ships a live customizer so visitors can toggle dark mode, the subscriber counter, and the logo on a mock waitlist page before they even sign up.
+The marketing page includes a live customizer, so visitors can toggle dark mode, the subscriber counter, and the logo on a mock waitlist page before they even sign up.
 
 <p align="center">
   <img src="screenshots/see-it-in-action.png" alt="Interactive See it in action preview with toggleable customizations" width="100%" />
 </p>
 
 ### Three steps to launch day
-Name your project. Pick a color and toggle social proof. Share the link.
+Name your project. Pick a color. Toggle social proof. Share the link.
 
 <p align="center">
   <img src="screenshots/three-steps.png" alt="Three-step onboarding: name, customize, share" width="100%" />
 </p>
 
 ### Six features. Zero bloat.
-Hosted pages, real-time analytics, email collection, custom domains, embeddable forms, one-click CSV export.
+Hosted pages, real-time analytics, email collection, custom domains, embeddable forms, and one-click CSV export.
 
 <p align="center">
-  <img src="screenshots/features.png" alt="Feature grid — hosted pages, analytics, email collection, custom domains, embeds, CSV export" width="100%" />
+  <img src="screenshots/features.png" alt="Feature grid - hosted pages, analytics, email collection, custom domains, embeds, CSV export" width="100%" />
 </p>
 
 ### Social proof
-A horizontal carousel of indie-maker testimonials sits between the feature grid and pricing.
+A horizontal carousel of indie maker testimonials sits between the feature grid and pricing.
 
 <p align="center">
   <img src="screenshots/testimonials.png" alt="Testimonials carousel" width="100%" />
@@ -79,7 +79,7 @@ A horizontal carousel of indie-maker testimonials sits between the feature grid 
 Free forever for one project. Pro at $9/mo when you need more.
 
 <p align="center">
-  <img src="screenshots/pricing.png" alt="Pricing — Free and Pro tiers" width="100%" />
+  <img src="screenshots/pricing.png" alt="Pricing - Free and Pro tiers" width="100%" />
 </p>
 
 ### FAQ + closing CTA
@@ -97,13 +97,13 @@ Free forever for one project. Pro at $9/mo when you need more.
 | Email + password signup with email verification | ✅ |
 | Google + GitHub OAuth | ✅ |
 | Password reset (token-based, expiring links via Resend) | ✅ |
-| Project CRUD — custom slug, accent color, optional logo URL | ✅ |
+| Project CRUD - custom slug, accent color, optional logo URL | ✅ |
 | Hosted public waitlist page at `/<slug>` | ✅ |
 | One-line embeddable widget at `/api/embed/<slug>/embed.js` | ✅ |
 | Live subscriber counter on public page | ✅ |
 | Subscriber list view + CSV export | ✅ |
 | 7-day signup sparkline | ✅ |
-| Account management — change email, change password, export data, delete account | ✅ |
+| Account management - change email, change password, export data, delete account | ✅ |
 | Honeypot bot defense + IP-hashed rate limiting on subscribe | ✅ |
 | Mobile-responsive dashboard with sheet drawer nav | ✅ |
 | Security headers (CSP, HSTS, X-Frame-Options, Referrer-Policy, Permissions-Policy) | ✅ |
@@ -128,19 +128,19 @@ Free forever for one project. Pro at $9/mo when you need more.
 | Validation | Zod (every API boundary + every form) |
 | Toasts | Sonner |
 | Icons | Lucide |
-| Tests | Vitest — 30 tests passing |
+| Tests | Vitest - 30 tests passing |
 | CI | GitHub Actions (lint + test + build) |
 | Hosting | Vercel (frontend + API routes) |
 
-**Vendor count: 5** — Vercel, Neon, Resend, Google OAuth, GitHub OAuth. No Stripe, no Sentry, no Upstash, no Turnstile. Deliberately small surface area until the product warrants more.
+**Vendor count: 5** - Vercel, Neon, Resend, Google OAuth, GitHub OAuth. No Stripe, no Sentry, no Upstash, no Turnstile. Kept deliberately small until the product actually needs more.
 
 ---
 
 ## Architecture notes
 
-A few decisions worth a closer look — the *why* behind each choice:
+A few decisions worth a closer look - the *why* behind each choice:
 
-- **JWT sessions over DB sessions.** No `Session` table — every request decodes a signed cookie. Cheap reads, no DB hop on auth checks. Tradeoff: revocation requires a `tokenVersion` field (not implemented; acceptable for the current trust model).
+- **JWT sessions over DB sessions.** No `Session` table - every request decodes a signed cookie. Cheap reads, no DB hop on auth checks. Tradeoff: revocation requires a `tokenVersion` field (not implemented; acceptable for the current trust model).
 - **In-memory rate limiter.** A `Map` in `src/lib/rate-limit.ts`. Fine for single-instance dev and the showcase deploy; on multi-instance serverless it limits per function instance, not globally. Documented upgrade path: drop in `@upstash/ratelimit` with the same call signature.
 - **Honeypot instead of CAPTCHA.** A hidden `hp` field on the subscribe form. Filled = silent 200, no DB write. Cheaper, no external script, no per-request network call, no user friction. Won't stop a determined attacker but neutralizes mass form-spam bots.
 - **Prisma driver adapter.** `PrismaPg` from `@prisma/adapter-pg` instead of the bundled binary. Connection string is normalized in `src/lib/db.ts` to opt into libpq SSL semantics (silences the pg-connection-string deprecation warning on Neon).
@@ -154,8 +154,8 @@ A few decisions worth a closer look — the *why* behind each choice:
 
 Vitest, 30 tests passing. Coverage is concentrated on the bits that fail silently if regressed:
 
-- Rate-limit utilities — window expiry, per-key isolation, header parsing
-- Zod validators — slug rules, reserved slug list, hex color, safe URL redirect
+- Rate-limit utilities - window expiry, per-key isolation, header parsing
+- Zod validators - slug rules, reserved slug list, hex color, safe URL redirect
 
 Lint + test + build run on every push via GitHub Actions.
 
@@ -205,7 +205,7 @@ In roughly the order they'd ship:
 
 ## License
 
-MIT — see [LICENSE](./LICENSE).
+MIT - see [LICENSE](./LICENSE).
 
 ---
 
