@@ -181,4 +181,3 @@ MIT - see [LICENSE](./LICENSE).
 ---
 
 **Built for indie makers who validate before they build.**  
-  [**rung](https://getrung.app)**
