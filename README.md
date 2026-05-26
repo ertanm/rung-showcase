@@ -11,14 +11,10 @@
 
 <p align="center">
   <a href="https://getrung.app">
-    <img src="assets/rung-mark.svg" alt="Rung" width="72" height="72" />
+    <img src="assets/rung-mark.svg" alt="" height="22" align="absmiddle" />&nbsp;<strong>rung</strong>
   </a>
-</p>
-
-<p align="center">
-  <a href="https://getrung.app">
-    <img src="assets/rung-mark.svg" alt="" height="18" align="absmiddle" />&nbsp;<strong>rung</strong>
-  </a>
+  <br />
+  <a href="https://getrung.app">getrung.app</a>
 </p>
 
 <h1 align="center">Rung</h1>
