@@ -9,10 +9,10 @@
   <img src="https://img.shields.io/badge/Vercel-deployed-black?logo=vercel" alt="Deployed on Vercel" />
 </p>
 
-<h1 align="center">Waitly</h1>
+<h1 align="center">Rung</h1>
 
 <p align="center">
-  <strong>Build hype. Capture demand. Launch bigger.</strong>
+  <strong>Validate before you build.</strong>
   <br />
   A hosted waitlist SaaS for indie makers - landing page, embeddable form, real signups, CSV export.
 </p>
@@ -32,12 +32,12 @@
 ---
 
 <p align="center">
-  <img src="screenshots/hero.png" alt="Waitly landing page - Build hype. Capture demand. Launch bigger." width="100%" />
+  <img src="screenshots/hero.png" alt="Rung landing page - Validate before you build." width="100%" />
 </p>
 
 ## What this is
 
-Waitly is a working SaaS for indie makers who want to test demand before they build. You can sign up, create a project, share the link, watch signups come in, and export the list when it's time to launch.
+Rung is a working SaaS for indie makers who want to test demand before they build. You can sign up, create a project, share the link, watch signups come in, and export the list when it's time to launch.
 
 This repo is also a **portfolio piece**: a full-stack Next.js 16 app built with Auth.js v5, Prisma, and Postgres, deployed end to end on Vercel with branch-per-preview Neon databases. The source lives in a private repo, so this README serves as the case study.
 
