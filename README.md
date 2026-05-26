@@ -1,47 +1,17 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16-black?logo=next.js" alt="Next.js 16" />
-  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white" alt="React 19" />
-  <img src="https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white" alt="TypeScript strict" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
-  <img src="https://img.shields.io/badge/Prisma-7-2D3748?logo=prisma&logoColor=white" alt="Prisma 7" />
-  <img src="https://img.shields.io/badge/PostgreSQL-Neon-4169E1?logo=postgresql&logoColor=white" alt="PostgreSQL via Neon" />
-  <img src="https://img.shields.io/badge/Auth.js-v5-5B21B6?logo=auth0&logoColor=white" alt="Auth.js v5" />
-  <img src="https://img.shields.io/badge/Vercel-deployed-black?logo=vercel" alt="Deployed on Vercel" />
-</p>
 
-<p align="center">
-  <a href="https://getrung.app">
-    <img src="assets/rung-mark.svg" alt="" height="22" align="absmiddle" />&nbsp;<strong>rung</strong>
-  </a>
-  <br />
-  <a href="https://getrung.app">getrung.app</a>
-</p>
+ ![](assets/rung-mark.svg)
+#  Rung 
 
-<h1 align="center">Rung</h1>
+[getrung.app](https://getrung.app)
 
-<p align="center">
-  <strong>Validate before you build.</strong>
-  <br />
-  A hosted waitlist SaaS for indie makers - landing page, embeddable form, real signups, CSV export.
-</p>
+**Validate before you build.**  
+A hosted waitlist SaaS for indie makers - landing page, embeddable form, real signups, CSV export.
 
-<p align="center">
-  <a href="https://getrung.app"><strong>Live demo →</strong></a>
-  &nbsp;&middot;&nbsp;
-  <a href="#screenshots">Screenshots</a>
-  &nbsp;&middot;&nbsp;
-  <a href="#features">Features</a>
-  &nbsp;&middot;&nbsp;
-  <a href="#tech-stack">Tech stack</a>
-  &nbsp;&middot;&nbsp;
-  <a href="#architecture-notes">Architecture notes</a>
-</p>
+**[Live demo →](https://getrung.app)**  ·  [Screenshots](#screenshots)  ·  [Features](#features)  ·  [Tech stack](#tech-stack)  ·  [Architecture notes](#architecture-notes)
 
 ---
 
-<p align="center">
-  <img src="screenshots/hero.png" alt="Rung landing page - Validate before you build." width="100%" />
-</p>
+
 
 ## What this is
 
@@ -56,83 +26,82 @@ This repo is also a **portfolio piece**: a full-stack Next.js 16 app built with 
 ## Screenshots
 
 ### Interactive product preview
+
 The marketing page includes a live customizer, so visitors can toggle dark mode, the subscriber counter, and the logo on a mock waitlist page before they even sign up.
 
-<p align="center">
-  <img src="screenshots/see-it-in-action.png" alt="Interactive See it in action preview with toggleable customizations" width="100%" />
-</p>
+
 
 ### Three steps to launch day
+
 Name your project. Pick a color. Toggle social proof. Share the link.
 
-<p align="center">
-  <img src="screenshots/three-steps.png" alt="Three-step onboarding: name, customize, share" width="100%" />
-</p>
+
 
 ### Six features. Zero bloat.
+
 Hosted pages, real-time analytics, email collection, custom domains, embeddable forms, and one-click CSV export.
 
-<p align="center">
-  <img src="screenshots/features.png" alt="Feature grid - hosted pages, analytics, email collection, custom domains, embeds, CSV export" width="100%" />
-</p>
+
 
 ### Social proof
+
 A horizontal carousel of indie maker testimonials sits between the feature grid and pricing.
 
-<p align="center">
-  <img src="screenshots/testimonials.png" alt="Testimonials carousel" width="100%" />
-</p>
+
 
 ### Simple pricing
+
 Free forever for one project. Pro at $9/mo when you need more.
 
-<p align="center">
-  <img src="screenshots/pricing.png" alt="Pricing - Free and Pro tiers" width="100%" />
-</p>
+
 
 ---
 
 ## Features
 
-| Feature | Status |
-| --- | :---: |
-| Email + password signup with email verification | ✅ |
-| Google + GitHub OAuth | ✅ |
-| Password reset (token-based, expiring links via Resend) | ✅ |
-| Project CRUD - custom slug, accent color, optional logo URL | ✅ |
-| Hosted public waitlist page at `/<slug>` | ✅ |
-| One-line embeddable widget at `/api/embed/<slug>/embed.js` | ✅ |
-| Live subscriber counter on public page | ✅ |
-| Subscriber list view + CSV export | ✅ |
-| 7-day signup sparkline | ✅ |
-| Account management - change email, change password, export data, delete account | ✅ |
-| Honeypot bot defense + IP-hashed rate limiting on subscribe | ✅ |
-| Mobile-responsive dashboard with sheet drawer nav | ✅ |
-| Security headers (CSP, HSTS, X-Frame-Options, Referrer-Policy, Permissions-Policy) | ✅ |
-| Stripe billing | ⏳ planned |
-| Custom domains for hosted pages | ⏳ planned |
-| Webhook notifications on subscriber milestones | ⏳ planned |
+
+| Feature                                                                            | Status    |
+| ---------------------------------------------------------------------------------- | --------- |
+| Email + password signup with email verification                                    | ✅         |
+| Google + GitHub OAuth                                                              | ✅         |
+| Password reset (token-based, expiring links via Resend)                            | ✅         |
+| Project CRUD - custom slug, accent color, optional logo URL                        | ✅         |
+| Hosted public waitlist page at `/<slug>`                                           | ✅         |
+| One-line embeddable widget at `/api/embed/<slug>/embed.js`                         | ✅         |
+| Live subscriber counter on public page                                             | ✅         |
+| Subscriber list view + CSV export                                                  | ✅         |
+| 7-day signup sparkline                                                             | ✅         |
+| Account management - change email, change password, export data, delete account    | ✅         |
+| Honeypot bot defense + IP-hashed rate limiting on subscribe                        | ✅         |
+| Mobile-responsive dashboard with sheet drawer nav                                  | ✅         |
+| Security headers (CSP, HSTS, X-Frame-Options, Referrer-Policy, Permissions-Policy) | ✅         |
+| Stripe billing                                                                     | ⏳ planned |
+| Custom domains for hosted pages                                                    | ⏳ planned |
+| Webhook notifications on subscriber milestones                                     | ⏳ planned |
+
 
 ---
 
 ## Tech stack
 
-| Layer | Choice |
-| --- | --- |
-| Framework | Next.js 16 (App Router, React 19, React Compiler) |
-| Language | TypeScript (strict mode) |
-| Styling | Tailwind CSS 4 + shadcn/ui (scoped Radix primitives) |
-| Animations | `motion` (Framer Motion v12) |
-| Database | PostgreSQL via Neon |
-| ORM | Prisma 7 with `@prisma/adapter-pg` driver adapter |
-| Auth | Auth.js v5 (JWT sessions, credentials + Google + GitHub) |
-| Email | Resend (verification + password reset only) |
-| Validation | Zod (every API boundary + every form) |
-| Toasts | Sonner |
-| Icons | Lucide |
-| Tests | Vitest - 30 tests passing |
-| CI | GitHub Actions (lint + test + build) |
-| Hosting | Vercel (frontend + API routes) |
+
+| Layer      | Choice                                                   |
+| ---------- | -------------------------------------------------------- |
+| Framework  | Next.js 16 (App Router, React 19, React Compiler)        |
+| Language   | TypeScript (strict mode)                                 |
+| Styling    | Tailwind CSS 4 + shadcn/ui (scoped Radix primitives)     |
+| Animations | `motion` (Framer Motion v12)                             |
+| Database   | PostgreSQL via Neon                                      |
+| ORM        | Prisma 7 with `@prisma/adapter-pg` driver adapter        |
+| Auth       | Auth.js v5 (JWT sessions, credentials + Google + GitHub) |
+| Email      | Resend (verification + password reset only)              |
+| Validation | Zod (every API boundary + every form)                    |
+| Toasts     | Sonner                                                   |
+| Icons      | Lucide                                                   |
+| Tests      | Vitest - 30 tests passing                                |
+| CI         | GitHub Actions (lint + test + build)                     |
+| Hosting    | Vercel (frontend + API routes)                           |
+
 
 **Vendor count: 5** - Vercel, Neon, Resend, Google OAuth, GitHub OAuth. No Stripe, no Sentry, no Upstash, no Turnstile. Kept deliberately small until the product actually needs more.
 
@@ -211,10 +180,5 @@ MIT - see [LICENSE](./LICENSE).
 
 ---
 
-<p align="center">
-  <strong>Built for indie makers who validate before they build.</strong>
-  <br />
-  <a href="https://getrung.app">
-    <img src="assets/rung-mark.svg" alt="" height="18" align="absmiddle" />&nbsp;<strong>rung</strong>
-  </a>
-</p>
+**Built for indie makers who validate before they build.**  
+  [**rung](https://getrung.app)**
