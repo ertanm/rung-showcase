@@ -9,6 +9,18 @@
   <img src="https://img.shields.io/badge/Vercel-deployed-black?logo=vercel" alt="Deployed on Vercel" />
 </p>
 
+<p align="center">
+  <a href="https://getrung.app">
+    <img src="assets/rung-mark.svg" alt="Rung" width="72" height="72" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://getrung.app">
+    <img src="assets/rung-mark.svg" alt="" height="18" align="absmiddle" />&nbsp;<strong>rung</strong>
+  </a>
+</p>
+
 <h1 align="center">Rung</h1>
 
 <p align="center">
@@ -18,7 +30,7 @@
 </p>
 
 <p align="center">
-  <a href="https://waitly-blush.vercel.app"><strong>Live demo →</strong></a>
+  <a href="https://getrung.app"><strong>Live demo →</strong></a>
   &nbsp;&middot;&nbsp;
   <a href="#screenshots">Screenshots</a>
   &nbsp;&middot;&nbsp;
@@ -80,12 +92,6 @@ Free forever for one project. Pro at $9/mo when you need more.
 
 <p align="center">
   <img src="screenshots/pricing.png" alt="Pricing - Free and Pro tiers" width="100%" />
-</p>
-
-### FAQ + closing CTA
-
-<p align="center">
-  <img src="screenshots/faq-cta.png" alt="FAQ section with closing call-to-action" width="100%" />
 </p>
 
 ---
@@ -212,5 +218,7 @@ MIT - see [LICENSE](./LICENSE).
 <p align="center">
   <strong>Built for indie makers who validate before they build.</strong>
   <br />
-  <a href="https://waitly-blush.vercel.app">waitly-blush.vercel.app</a>
+  <a href="https://getrung.app">
+    <img src="assets/rung-mark.svg" alt="" height="18" align="absmiddle" />&nbsp;<strong>rung</strong>
+  </a>
 </p>
